@@ -1,6 +1,6 @@
 # CODECRAFT_WD_03 – Tic-Tac-Toe Web Application
 
-🎮 **Internship Task 3 for CodeCraft Infotech – Web Development Track**
+🎮 **Internship Task 3 for CODECRAFT INFOTECH – Web Development Track**
 
 (Fulfilled all requirements of the task)
 
@@ -45,4 +45,4 @@ Dark pink gradient background with glowing neon text, animated winner cells, and
 
 ## 🚀 Author:
 
-Asma Zaman – Frontend Intern @CodeCraft Infotech
+Asma Zaman – Frontend Intern @CODECRAFT INFOTECH
