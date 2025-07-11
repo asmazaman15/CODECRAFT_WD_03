@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #6e032c, #ad003a, #50172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #ffb3ff;
+  text-shadow: 0 0 10px #ff66ff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: inset 0 0 10px #1a1a1a;
+}
+
+.cell:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.X {
+  color: #ffa1b9;
+  text-shadow: 0 0 10px #ff66cc;
+}
+
+.O {
+  color: #66ccff;
+  text-shadow: 0 0 10px #66ccff;
+}
+
+/* ✨ Winner Cells */
+.winner {
+  background-color: #ffe066 !important;
+  color: #1a1a1a !important;
+  text-shadow: none;
+  box-shadow: 0 0 15px #ffe066;
+  transform: scale(1.1);
+  animation: glow 0.8s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #ffe066;
+  }
+  to {
+    box-shadow: 0 0 25px #ffe066, 0 0 35px #ffd700;
+  }
+}
+
+.status {
+  margin: 20px 0 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #fdfdfd;
+}
+
+.reset-btn {
+  background-color: transparent;
+  border: 2px solid #ffb3ff;
+  padding: 10px 25px;
+  color: #ffb3ff;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff66ff;
+}
+
+.reset-btn:hover {
+  background-color: #ffb3ff;
+  color: #1a1a1a;
+  box-shadow: 0 0 15px #ff66ff;
+}
+
+/* 🛑 Disable hover when game ends */
+.disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
